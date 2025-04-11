@@ -1,0 +1,316 @@
+*{
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+   
+}
+body {
+  --header-bg:  #e0dddd;
+  --header-text: #333;
+  --footer-bg: #e0dddd;
+  --footer-text:#333;
+  --card-bg:black;
+  --h1-text:black;
+  --togg-bg:black;
+}
+body.modo-oscuro {
+  --header-bg: #333;
+  --header-text: rgb(141, 8, 8);
+  --footer-bg:#333;
+  --footer-text:white;
+  --card-bg:#333;
+  --h1-text:#333;
+  --togg-bg:#333;
+}
+header {
+  background-color: var(--header-bg);
+  color: var(--footer-text);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.header1 {
+  font-size: 25px;
+  font-weight: 800;
+  margin: 5px;
+}
+nav {
+  width: 960px; 
+    
+}
+nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    font-weight: 800;
+}
+
+nav ul li {
+    position: relative;
+    
+}
+
+nav ul li a.link {
+    display: block;
+    color: var(--footer-text);
+    text-decoration: none;
+    padding: 10px 25px;
+}
+
+nav ul li:hover > ul.sub-menu {
+    display: block;
+}
+
+ul.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    color: white;
+    list-style: none;
+    min-width: 110px;
+}
+
+ul.sub-menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+ul.sub-menu li a:hover {
+    background-color: #555;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #000;
+  text-align: center;
+}
+  
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  color:var(--h1-text);
+}
+  
+p{
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+  
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+  
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  background: var(--togg-bg);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  gap: 1rem;
+  user-select: none;
+  width: 200px;
+  margin: auto;
+}
+  
+.toggle-label .switch {
+  width: 40px;
+  height: 20px;
+  background: #666;
+  border-radius: 999px;
+  position: relative;
+}
+  
+.toggle-label .switch::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #c23131;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+  
+.toggle-checkbox:checked + .toggle-label .switch::before {
+  transform: translateX(20px);
+}
+  
+.toggle-checkbox:checked + .toggle-label .switch {
+  background: #9c8383;
+}
+  
+.planes {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  
+.card {
+  background-color: var(--card-bg);
+  color: white;
+  padding: 2rem;
+  width: 280px;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  position: relative;
+}
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+.destacado {
+  border: 2px solid red;
+}
+  
+.card h2 {
+  margin-bottom: 1rem;
+}
+  
+.precio {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+  
+.precio span {
+  display: none;
+}
+  
+.precio small {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #aaa;
+}
+  
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+  
+  ul li {
+    margin: 0.5rem 0;
+  }
+  
+.no-disponible {
+  color: #aaa;
+  text-decoration: line-through;
+}
+  
+.buton {
+  padding: 0.75rem;
+  background: #ff5e5e;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 800;
+  font-size: 17px;
+}
+  
+.buton:hover {
+  background: #e04848;
+}
+  
+.precio .mensual,
+  .card ul.mensual {
+    display: block;
+  }
+  
+.precio .anual,
+  .card ul.anual {
+    display: none;
+  }
+  
+.toggle-checkbox:checked ~ .planes .card .precio .mensual,
+.toggle-checkbox:checked ~ .planes .card ul.mensual {
+  display: none;
+}
+  
+.toggle-checkbox:checked ~ .planes .card .precio .anual,
+.toggle-checkbox:checked ~ .planes .card ul.anual {
+  display: block;
+}
+
+
+footer{
+    display: flex;
+    background:var(--footer-bg);
+    align-items: center;
+    justify-content: space-evenly;
+}
+.social-iconos{
+    display: flex;
+    flex-direction: column;
+    width: 20vh;
+    height: 24vh;
+    font-size: 16px;
+    margin: 5px;
+    color: var(--footer-text);
+}
+.bi{
+    margin: 14px;
+    font-size: 18px;
+}
+.bi-instagram:hover{
+    color:rgba(19, 19, 188, 0.24);
+}  
+.bi-facebook:hover{
+    color:blue;
+}
+.bi-whatsapp:hover{
+    color: green;
+}
+.bi-twitter:hover{
+    color: rgb(110, 110, 255);
+}
+.social-icono-text{
+    text-decoration: none;
+    color: var(--footer-text);
+    margin-left: 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cont-inf{
+  display: flex;
+  margin-top: 40px;
+  height: 18vh;
+  font-weight: 900;
+  color: var(--footer-text);
+}   
+.cont-inf-text{
+  height: 30px;
+}
+.p-t{
+  color: var(--footer-text);
+}
+
+p{      
+  
+  margin-top: 25px;
+}

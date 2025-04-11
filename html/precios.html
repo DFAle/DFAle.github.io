@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/precios.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <header>
+    <div class="header1">
+        Mi Gimnasio
+    </div>
+    
+    <nav>
+        
+        <ul>
+          <li>
+            <button  id="toggle-tema" style="padding: 10px; border-radius: 8px; cursor: pointer;">
+            <span id="icono">🌙</span> Cambiar modo
+          </button>
+          </li>
+            <li><a class="link" href="/index.html">INICIO</a> </li>
+
+            <li></li>
+
+            <li><a class="link"  href="../html/entrenadores.html">ENTRENADORES</a></li>
+            
+            <li><a class="link"  href="../html/precios.html">PRECIOS</a></li>
+            
+            <li><a class="link"  href="../html/blog.html">BLOG</a></li>
+            <li><a class="link" href="../html/clases.html">CLASES</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Yoga</a></li>
+                    <li><a href="#">Zumba</a></li>
+                    <li><a href="#">Zumba</a></li>
+                    <li><a href="#">Spinning</a></li>
+                </ul>
+            </li>
+            
+            <li><a class="link"  href="../html/contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+</header>
+    <br><br><br>
+    <section class="contenedor-precios">
+        <h1>ELIGE TU PLAN PERFECTO</h1>
+        <p>Encuentra el plan que mejor se adapte a tus objetivos.</p>
+    
+        <div class="switch-wrapper">
+          <input type="checkbox" id="toggle" class="toggle-checkbox">
+          <label for="toggle" class="toggle-label">
+            <span>Mensual</span>
+            <div class="switch"></div>
+            <span>Anual</span>
+          </label>
+          <br>
+          <div class="planes">
+            <div class="card">
+              <h2>Básico</h2>
+              <div class="precio">
+                <span class="mensual">$25 <small>/mes</small></span>
+                <span class="anual">$250 <small>/año</small></span>
+              </div>
+              <ul class="mensual">
+                <li>Acceso al Gimnasio</li>
+                <br>
+                <li>1 Clase Grupal</li>
+                <br>
+                <li class="no-disponible">Entrenador Personal</li>
+                <br>
+                <li class="no-disponible">Nutricionista</li>
+                <br>
+              </ul>
+              <ul class="anual">
+                <li>Acceso al Gimnasio</li><br>
+                <li>2 Clases Grupales</li><br>
+                <li class="no-disponible">Entrenador Personal</li><br>
+                <li class="no-disponible">Nutricionista</li><br>
+              </ul>
+              <button class="buton" >Suscribirse</button>
+            </div>
+            <div class="card destacado">
+              <h2>Pro</h2>
+              <div class="precio">
+                <span class="mensual">$45 <small>/mes</small></span>
+                <span class="anual">$450 <small>/año</small></span>
+              </div>
+              <ul class="mensual">
+                <li>Acceso al Gimnasio</li>
+                <br>
+                <li>Clases Grupales</li>
+                <br>
+                <li>Entrenador Personal</li>
+                <br>
+                <li class="no-disponible">Nutricionista</li>
+                <br>
+              </ul>
+              <ul class="anual">
+                <li>Acceso al Gimnasio</li>
+                <br>
+                <li>Clases Grupales Ilimitadas</li>
+                <br>
+                <li>Entrenador Personal</li>
+                <br>
+                <li>Nutricionista (1 consulta)</li>
+                <br>
+              </ul>
+              <button class="buton" >Suscribirse</button>
+            </div>
+    
+            <div class="card">
+              <h2>Premium</h2>
+              <div class="precio">
+                <span class="mensual">$65 <small>/mes</small></span>
+                <span class="anual">$650 <small>/año</small></span>
+              </div>
+              <ul class="mensual">
+                <li>Acceso al Gimnasio</li>
+                <br>
+                <li>Clases Grupales</li>
+                <br>
+                <li>Entrenador Personal</li>
+                <br>
+                <li>Nutricionista</li>
+                <br>
+              </ul>
+              <ul class="anual">
+                <li>Acceso Total</li><br>
+                <li>Clases VIP</li><br>
+                <li>Entrenador Personal Exclusivo</li><br>
+                <li>Nutricionista + Suplementos</li><br>
+              </ul>
+              <button class="buton" >Suscribirse</button>
+            </div>
+          </div>
+        </div>
+    </section>
+    <br><br><br>
+    <footer >
+      <div class="social-iconos">
+          <i class="bi bi-instagram"><a class="social-icono-text" href="#">Instagram</a></i>
+          <i class="bi bi-facebook"><a class="social-icono-text" href="#">Facebook</a></i>
+          <i class="bi bi-whatsapp"><a class="social-icono-text" href="#">WhatsApp</a></i>
+          <i class="bi bi-twitter"><a class="social-icono-text" href="#">Twitter</a></i>
+      </div>
+
+      <div class="cont-inf">
+          <div class="cont-inf-text">
+              CONTACTANOS 
+              <p class="p-t" >Alejandro Cuellar</p>
+              <p class="p-t" >thealecuellar@gmail.com</p>
+          </div>
+      </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('toggle-tema');
+    const icono = document.getElementById('icono');
+
+    btn.addEventListener('click', () => {
+    document.body.classList.toggle('modo-oscuro');
+
+    // Cambiar ícono
+    if (document.body.classList.contains('modo-oscuro')) {
+        icono.textContent = '☀️'; // Sol
+    } else {
+      icono.textContent = '🌙'; // Luna
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/blog.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <header>
+    <div class="header1">
+        Mi Gimnasio
+    </div>
+    
+    <nav>
+        
+        <ul>
+          <li>
+            <button  id="toggle-tema" style="padding: 10px; border-radius: 8px; cursor: pointer;">
+            <span id="icono">🌙</span> Cambiar modo
+          </button>
+          </li>
+            <li><a class="link" href="/index.html">INICIO</a> </li>
+
+            <li></li>
+
+            <li><a class="link"  href="../html/entrenadores.html">ENTRENADORES</a></li>
+            
+            <li><a class="link"  href="../html/precios.html">PRECIOS</a></li>
+            
+            <li><a class="link"  href="../html/blog.html">BLOG</a></li>
+            <li><a class="link" href="../html/clases.html">CLASES</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Yoga</a></li>
+                    <li><a href="#">Zumba</a></li>
+                    <li><a href="#">Zumba</a></li>
+                    <li><a href="#">Spinning</a></li>
+                </ul>
+            </li>
+            
+            <li><a class="link"  href="../html/contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+  </header>
+  <!-- Radios para un solo grupo de filtros -->
+  <input type="radio" name="filtro" id="filtro-todas" checked>
+  <input type="radio" name="filtro" id="filtro-nutricion">
+  <input type="radio" name="filtro" id="filtro-entrenamiento">
+  <input type="radio" name="filtro" id="filtro-salud">
+  <input type="radio" name="filtro" id="filtro-estilo">
+  <input type="radio" name="filtro" id="filtro-fitness">
+  <input type="radio" name="filtro" id="filtro-dieta">
+  <input type="radio" name="filtro" id="filtro-ejercicio">
+  <input type="radio" name="filtro" id="filtro-bienestar">
+
+  <div class="blog-container">
+    <aside class="sidebar">
+      <h2 style="font-weight: 900;" >CATEGORÍAS</h2><br>
+      <label for="filtro-todas">Todas</label><br>
+      <label for="filtro-nutricion">Nutrición</label><br>
+      <label for="filtro-entrenamiento">Entrenamiento</label><br>
+      <label for="filtro-salud">Salud</label><br>
+      <label for="filtro-estilo">Estilo de Vida</label><br>
+
+      <h2 style="font-weight: 900;" >TAGS</h2><br>
+      <label for="filtro-fitness">Fitness</label><br>
+      <label for="filtro-dieta">Dieta</label><br>
+      <label for="filtro-ejercicio">Ejercicio</label><br>
+      <label for="filtro-bienestar">Bienestar</label><br>
+    </aside>
+
+    <section class="blog-posts">
+      <div class="post nutricion fitness dieta">
+        <img src="../Imagenes/blog/n1.png" alt="Imagen 1">
+        <div class="content">
+          <h3>Guía de Nutrición para Ganar Músculo</h3>
+          <p>Recetas, consejos y trucos para ganar músculo de manera saludable.</p>
+        </div>
+        <div class="comments">
+          <strong>Comentarios</strong>
+          <div class="comment">@lopezmartin: ¡Excelente artículo!</div>
+          <div class="comment">@maria123: Muy útil, gracias.</div>
+        </div>
+      </div>
+
+      <div class="post nutricion dieta">
+        <img src="../Imagenes/blog/n2.png" alt="Imagen 2">
+        <div class="content">
+          <h3>La Importancia de la Proteína</h3>
+          <p>Todo lo que necesitas saber sobre la proteína.</p>
+        </div>
+        <div class="comments">
+          <strong>Comentarios</strong>
+          <div class="comment">@joseperez: Muy interesante.</div>
+        </div>
+      </div>
+
+      <div class="post entrenamiento ejercicio">
+        <img src="../Imagenes/blog/e1.png" alt="Imagen 3">
+        <div class="content">
+          <h3>Rutina de Entrenamiento</h3>
+          <p>Una rutina efectiva para mejorar fuerza y resistencia.</p>
+        </div>
+        <div class="comments">
+          <strong>Comentarios</strong>
+          <div class="comment">@alex_fit: Brutal la rutina.</div>
+        </div>
+      </div>
+
+      <div class="post estilo bienestar">
+        <img src="../Imagenes/blog/v1.png" alt="Imagen 4">
+        <div class="content">
+          <h3>Estilo de Vida Saludable</h3>
+          <p>Consejos para mantener una vida balanceada y feliz.</p>
+        </div>
+        <div class="comments">
+          <strong>Comentarios</strong>
+          <div class="comment">@lucia_bienestar: Hermoso artículo.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer >
+    <div class="social-iconos">
+        <i class="bi bi-instagram"><a class="social-icono-text" href="#">Instagram</a></i>
+        <i class="bi bi-facebook"><a class="social-icono-text" href="#">Facebook</a></i>
+        <i class="bi bi-whatsapp"><a class="social-icono-text" href="#">WhatsApp</a></i>
+        <i class="bi bi-twitter"><a class="social-icono-text" href="#">Twitter</a></i>
+    </div>
+
+    <div class="cont-inf">
+        <div class="cont-inf-text">
+            CONTACTANOS 
+            <p>Alejandro Cuellar</p>
+            <p>thealecuellar@gmail.com</p>
+        </div>
+    </div>
+  </footer>
+  <script>
+    const btn = document.getElementById('toggle-tema');
+    const icono = document.getElementById('icono');
+
+    btn.addEventListener('click', () => {
+    document.body.classList.toggle('modo-oscuro');
+
+    // Cambiar ícono
+    if (document.body.classList.contains('modo-oscuro')) {
+        icono.textContent = '☀️'; 
+    } else {
+      icono.textContent = '🌙'; 
+      }
+    });
+  </script>
+</body>
+</html>
